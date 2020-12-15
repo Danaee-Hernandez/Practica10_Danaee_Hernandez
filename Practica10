@@ -1,0 +1,111 @@
+EJERCICIO 1: Encontrar la funcionalidad del código
+
+
+/*
+Practica 10                              Hernandez Sanchez Valeria Danaee
+fecha de entrega 14 diciembre 2020
+*/
+/*Declaracion de librerias*/
+#include <stdio.h>
+/*Declaracion de funcion principal*/
+int main( )
+{
+	/*Declaracion de variables locales*/
+    int N, CONT, AS;
+    AS=0;
+    CONT=1;
+    /*Bloque de instrucciones*/
+    printf("TECLEA UN NUMERO: ");
+    scanf("%i",&N);
+    /* bloque de while que mientras el contador sea menor 
+	o igual al numero tecleado, se sumaran los valores del contador
+	incrementado cada vez en dos*/
+    while(CONT<=N)
+    {
+       AS=(AS+CONT);
+       CONT=(CONT+2);
+    }
+    printf("\nEL RESULTADO ES %i\n", AS);
+}
+
+
+
+
+
+
+
+EJERCICIO 2: Tablas de multiplicar
+
+/*Practica 10                         Hernandez Sanchez Valeria Danaee
+fecha:14 diciembre 2020*/
+
+/*Este programa sirve para generar e imprimir las tablas de 
+multiplicar del 1 al 10*/
+
+/*Declarcion de librerias*/
+#include <stdio.h>
+/*Declaracion de funcion principal*/
+int main()
+{
+	/*Declaracion de variables locales*/
+int i, j;
+    /*Bloque de instrucciones*/ 
+    /*Estructura for para indicar el numero al que pertenece la tabla*/
+    for(i=1; i<=10; i++)
+      {
+       printf("\nTabla del %i\n", i);
+       /*Estructura for para generar los numeros de la tabla*/
+       for(j=1; j<=10; j++)
+          {
+           printf("%i X %i = %i\n", i, j, i*j);
+          }
+      }
+}
+
+
+
+
+
+
+EJERCICIO 3:Generador de serie 
+
+
+
+
+/*Practica 10                    Hernandez Sanchez Valeria Danaee
+fecha:14 diciembre 2020*/
+
+/*Este prgograma sirve para generar una serie con los numeros
+que ingresa el usuario*/
+
+/*Declaracion de librerias*/
+#include <stdio.h>
+#include <math.h>
+/*Declaración de funcion principal*/
+int main()
+{
+	/*Declaracion de variables locales enteras*/
+    int K, X, AP, N;
+    
+    /*Declaracion de variables locales flotantes*/
+    float AS;
+    
+    /*Bloque de instrucciones*/
+    printf("EL TERMINO GENERICO DE LA SERIE ES: X^K/K!");
+    printf("\nN=");
+    /*Variable N que sirve para limitar el while*/
+    scanf("%d",&N);
+    /*Variable x que será la base la la serie*/
+    printf("X=");
+    scanf("%d",&X);
+    K=0;
+    AP=1;
+    AS=0;
+    while(K<=N)
+      {
+      AS=AS+pow(X,K)/AP;
+      K=K+1;
+      AP=AP*K;
+      }
+    printf("SUM=%le",AS);
+}
